@@ -37,5 +37,3 @@ spec:
             requests:
               cpu: 10m
               memory: 512Mi
-          port:
-            number: 80

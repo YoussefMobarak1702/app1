@@ -8,7 +8,7 @@ metadata:
     nginx.ingress.kubernetes.io/canary-weight: "80"
 spec:
   rules:
-  - host: "localhost"
+  - host:
     http:
       paths:
       - path: /
@@ -16,12 +16,5 @@ spec:
         backend:
           service:
             name: app2-service
-            port:
-              number: 80
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: app1-service
             port:
               number: 80
