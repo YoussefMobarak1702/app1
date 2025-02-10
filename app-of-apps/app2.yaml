@@ -29,6 +29,14 @@ spec:
         - name: app2
           image: youssefmobarak/app2-docker-java:latest
           imagePullPolicy: Always
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              add:
+                - NET_ADMIN
+                - NET_RAW
+              drop:
+                - All
           resources:
             limits:
               cpu: 250m
